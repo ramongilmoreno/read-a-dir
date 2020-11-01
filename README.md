@@ -1,4 +1,4 @@
-# read-a-dir load a directory contents with custom `fs` implementations
+# read-a-dir load a directory contents; supports custom `fs` implementations
 
 Loads a directory contents and returns the list of files found on it. Allows
 using custom `fs` implementations.
@@ -38,7 +38,7 @@ The options object can include the following parameters:
 
 * `fs`, the filesystem object (e.g.
   [memfs](https://github.com/streamich/memfs#readme)) used to read the files
-  from. If not provided, Default Node.js 'fs' will be required instead.
+  from. If not provided, default Node.js 'fs' will be required instead.
 
 * `includeHidden`, set it to `true` to process the hidden (starting with dot
   `.`) files in the processing. Ignored by default.
