@@ -1,19 +1,19 @@
 {
   "name": "read-a-dir",
   "version": "0.0.1a",
-  "description": "Read directory contents with vfs support",
+  "description": "Read directory contents with support for custom fs implementations",
   "main": "lib/read-a-dir.js",
   "devDependencies": {
     "eslint": "^7.5.0",
-    "jasmine": "^3.5.0"
+    "jasmine": "^3.5.0",
+    "memfs": "^3.2.0",
+    "mktemp": "^1.0.0"
   },
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore .",
     "test": "jasmine"
   },
   "dependencies": {
-    "memfs": "^3.2.0",
-    "mktemp": "^1.0.0",
     "pino": "^6.4.1"
   },
   "homepage": "https://github.com/ramongilmoreno/read-a-dir",

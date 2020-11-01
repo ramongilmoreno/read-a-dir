@@ -1,15 +1,16 @@
-# read-a-dir utility to recursively load a directory contents
+# read-a-dir load a directory contents with custom `fs` implementations
 
-Loads a directory contents and returns the list of files found on it.
+Loads a directory contents and returns the list of files found on it. Allows
+using custom `fs` implementations.
 
-For example: for A directory with the following files:
+For example: for a directory with the following files:
 
     1.txt
     2/2.txt
     2/3/3.txt
 
-It is expected that this utility returns exactly the items above, except for
-the order which may vary as asynchronous processing of the directories is
+It is expected that this utility returns exactly the items above; except for
+the order, which may vary, as asynchronous processing of the directories is
 carried out.
 
 This utlity uses UNIX-style separators `/` for simplicty.
