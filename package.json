@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "memfs": "^3.2.0",
+    "mktemp": "^1.0.0",
     "pino": "^6.4.1"
   },
   "homepage": "https://github.com/ramongilmoreno/read-a-dir",

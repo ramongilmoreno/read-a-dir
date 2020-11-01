@@ -1,5 +1,19 @@
 # read-a-dir utility to recursively load a directory contents
 
+Loads a directory contents and returns the list of files found on it.
+
+For example: for A directory with the following files:
+
+    1.txt
+    2/2.txt
+    2/3/3.txt
+
+It is expected that this utility returns exactly the items above, except for
+the order which may vary as asynchronous processing of the directories is
+carried out.
+
+This utlity uses UNIX-style separators `/` for simplicty.
+
 ## Quick build guide
 
 Build the lib with this command:
@@ -25,14 +39,6 @@ The options object can include the following parameters:
   [memfs](https://github.com/streamich/memfs#readme)) used to read the files
   from. If not provided, Default Node.js 'fs' will be required instead.
 
-* `includeDirs`, set it to `true` to return directories in the result.
-  Otherwise directories will be traversed but not returned by the `readdir`
-  function.
-
 * `includeHidden`, set it to `true` to process the hidden (starting with dot
   `.`) files in the processing. Ignored by default.
-
-* `filter`, a predicate to filter paths. A function like `(path) => false` will
-  not process any file. Note that `includeDirs` and `includeHidden` are checked
-  before this filter.
 
